@@ -1,0 +1,22 @@
+﻿
+@{
+    Layout = null;
+}
+@model MyMVCNET.UI.Models.VM.OrderVM
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <span>Hoşgeldiniz,</span>@ViewBag.girisYapmisKullanici
+        @using (Html.BeginForm("LogOut", "Account", FormMethod.Post))
+        {
+        <input type="submit" name="name" value="Güvenli Çıkış Yap" />
+        }
+    </div>
+</body>
+</html>

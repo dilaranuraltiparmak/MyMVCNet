@@ -1,0 +1,69 @@
+﻿
+@{
+    Layout = null;
+
+}
+
+@model List<MyMVCNET.UI.Models.VM.KategoriVM>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>XML  Tablo</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.js"></script>
+</head>
+<body>
+
+
+    <table id="kategoriTable" class="table table-striped">
+
+        <tr>
+            <th>ID</th>
+            <th>Kategori Adi</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ID</td>
+                <td>@item.KategoriAdi</td>
+            </tr>
+
+        }
+
+    </table>
+    </body>
+</html>
+
+
+@*<script>
+        // XML belgesi URL'si
+        var url = "kategori.xml";
+
+        // XML verilerini yüklemek için XMLHttpRequest kullan
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                // XML verilerini parse edin
+                var xml = this.responseXML;
+                var kategoriler = xml.getElementsByTagName("KategoriVM");
+
+                // HTML tablosu oluşturun
+                var tbody = document.getElementById("kategoriTable").getElementsByTagName("tbody")[0];
+                for (var i = 0; i < kategoriler.length; i++) {
+                    var row = tbody.insertRow(i);
+                    var idCell = row.insertCell(0);
+                    var nameCell = row.insertCell(1);
+                    idCell.innerHTML = kategoriler[i].getElementsByTagName("ID")[0].childNodes[0].nodeValue;
+                    nameCell.innerHTML = kategoriler[i].getElementsByTagName("KategoriAdi")[0].childNodes[0].nodeValue;
+                }
+            }
+        };
+        xhttp.open("GET", url, true);
+        xhttp.send();
+    </script>*@
+
+</body>
+</html>

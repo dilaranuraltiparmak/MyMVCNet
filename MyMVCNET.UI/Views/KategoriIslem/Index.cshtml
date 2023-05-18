@@ -1,0 +1,50 @@
+﻿
+@{
+    Layout = null;
+
+}
+@using MyMVCNET.UI.Models.VM
+@model List<KategoriVM>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div class="container mt-2">
+        <h2 class="text-center text-dark">Kategoriler</h2>
+        <div class="row">
+            <table class="table table-responsive table-active">
+                <tr>
+                    <th>ID</th>
+                    <th>Kategori ADI</th>
+                    <th> </th>
+                </tr>
+
+                @foreach (KategoriVM item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(a => item.ID)
+
+                        </td>
+                        <td>
+                            @Html.DisplayFor(a => item.KategoriAdi)
+                        </td>
+                        <td>
+                            @*localhost :7878/KategoriIslemleri/Duzenle/5*@
+                            @Html.ActionLink("Düzenle", "Duzenle", new { id = item.ID },new { @class= "btn btn-danger"});
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+     
+    </div>
+</body>
+</html>

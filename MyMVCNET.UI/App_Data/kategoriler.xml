@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfKategoriVM xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <KategoriVM>
+    <ID>1023</ID>
+    <KategoriAdi>ayberk</KategoriAdi>
+  </KategoriVM>
+  <KategoriVM>
+    <ID>1</ID>
+    <KategoriAdi>Beverages2</KategoriAdi>
+  </KategoriVM>
+  <KategoriVM>
+    <ID>2</ID>
+    <KategoriAdi>Condiments</KategoriAdi>
+  </KategoriVM>
+  <KategoriVM>
+    <ID>3</ID>
+    <KategoriAdi>Confections</KategoriAdi>
+  </KategoriVM>
+  <KategoriVM>
+    <ID>4</ID>
+    <KategoriAdi>Dairy Products</KategoriAdi>
+  </KategoriVM>
+  <KategoriVM>
+    <ID>1022</ID>
+    <KategoriAdi>dede</KategoriAdi>
+  </KategoriVM>
+  <KategoriVM>
+    <ID>1016</ID>
+    <KategoriAdi>dna</KategoriAdi>
+  </KategoriVM>
+  <KategoriVM>
+    <ID>1030</ID>
+    <KategoriAdi>dna</KategoriAdi>
+  </KategoriVM>
+  <KategoriVM>
+    <ID>5</ID>
+    <KategoriAdi>Grains/Cereals</KategoriAdi>
+  </KategoriVM>
+  <KategoriVM>
+    <ID>1031</ID>
+    <KategoriAdi>jle</KategoriAdi>
+  </KategoriVM>
+  <KategoriVM>
+    <ID>6</ID>
+    <KategoriAdi>Meat/Poultry</KategoriAdi>
+  </KategoriVM>
+  <KategoriVM>
+    <ID>7</ID>
+    <KategoriAdi>Produce</KategoriAdi>
+  </KategoriVM>
+  <KategoriVM>
+    <ID>8</ID>
+    <KategoriAdi>Seafood2</KategoriAdi>
+  </KategoriVM>
+</ArrayOfKategoriVM>

@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = null;
+
+}
+@model MyMVCNET.UI.Models.VM.SehirVM
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MyDropDownListFor</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</head>
+<body>
+    <div>
+        @*Html.DropDownList("Sehirlerim", "Seçiniz..")*@
+
+        <br />
+        @Html.DropDownList("Sehirler", new List<SelectListItem>()
+   { new SelectListItem() { Text="van",Value="15"},
+     new SelectListItem(){Text="hakkari",Value="16" }
+   }, new { @style = "color:red" })
+
+        @*Controllerdan gelen Select List tipi burada List <SelectListItem> tipine nasıl çevrilir. ?*@
+        <br />
+        @using (Html.BeginForm())
+        {
+            <h5>FOR kullanımı</h5>
+            @Html.DropDownListFor(a => a.SehirID, new List<SelectListItem>()
+       { new SelectListItem() { Text="van",Value="15"},
+         new SelectListItem(){Text="hakkari",Value="16" }
+       }, "Seçiniz..")
+            <input type="submit" name="name" value="Seçimi bitir." />
+        }
+    </div>
+</body>
+</html>

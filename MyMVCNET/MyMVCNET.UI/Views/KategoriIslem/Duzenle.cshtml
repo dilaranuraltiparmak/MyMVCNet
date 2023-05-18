@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+
+@model MyMVCNET.UI.Models.VM.KategoriVM
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Duzenle</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("Duzenle","KategoriIslem",FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+            @*ID basılmayacak*@
+            @Html.HiddenFor(a => a.ID)
+
+            @Html.LabelFor(a => a.KategoriAdi, htmlAttributes: new { @class = "col-md-2" })
+            @Html.EditorFor(a => a.KategoriAdi)
+
+            <input type="submit" name="name" value="Düzenle" />
+        }
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = null;
+    //view engine  => razor
+    int a = 70;
+    if (HttpContext.Current.Session["giris"] != null)
+    {
+        var dahaOncesindeGirilmisOlanDeger = HttpContext.Current.Session["giris"].ToString();
+    }
+    var onlineKullanicisiSayisi = Convert.ToInt32
+(HttpContext.Current.Application["onlineKullaniciSayisi"]);
+    var toplamKullanicisiSayisi = Convert.ToInt32
+    (HttpContext.Current.Application["ToplamKullaniciSayisi"]);
+
+}
+           
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        online : @onlineKullanicisiSayisi
+        toplam: @toplamKullanicisiSayisi
+
+
+
+    </div>
+</body>
+</html>

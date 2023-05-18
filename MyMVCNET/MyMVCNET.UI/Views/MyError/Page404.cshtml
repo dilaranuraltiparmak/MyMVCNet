@@ -1,0 +1,26 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Page404</title>
+</head>
+<body>
+    <div>
+        sayfa bulunamadı
+        <br />
+       
+        <br />
+    </div>
+    @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+    {
+    <input type="submit" name="name" value="Ana Sayfaya Git" />
+    }
+
+</body>
+</html>

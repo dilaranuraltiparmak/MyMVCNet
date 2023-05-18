@@ -1,0 +1,40 @@
+﻿
+@{
+    Layout = null;
+}
+@model MyMVCNET.UI.Models.VM.AccountVM.MyUserVM
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    
+        <h1>Giriş Sayfası</h1>
+        <div>
+                @using (Html.BeginForm("HusamettinPost", "Account", FormMethod.Post))
+                {
+                    @Html.TextBoxFor(a => a.FirstName)
+                    <br />
+                    @Html.TextBoxFor(a => a.LastName)
+                    <br />
+                    @Html.TextBoxFor(a => a.Password)
+                    <br />
+                    @Html.TextBoxFor(a => a.Age)
+                    <br />
+                    @Html.CheckBoxFor(a => a.RememberMe) <span>Beni Hatırla</span>
+                    <br />
+
+                    <input type="submit" name="name" value="Giriş Yap" />
+                }
+
+                @using (Html.BeginForm("UnutBeni", "Account"))
+                {
+                    <input type="submit" name="name" value="Beni Unut" />
+                }
+
+            </div>
+</body>
+</html>

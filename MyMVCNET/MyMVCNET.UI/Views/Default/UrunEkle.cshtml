@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = null;
+}
+@model MyMVCNET.UI.Models.VM.UrunEkleVM
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UrunEkle</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            @Html.TextBoxFor(a => a.UrunAdi)
+
+            <span>
+                Stok
+            </span>@Html.TextBoxFor(a => a.StokMiktari)
+
+            <br />
+
+            <br />
+            @Html.TextBoxFor(a => a.UrunFiyati)
+            <br />
+
+            @Html.DropDownListFor(a => a.Kategorisi, Model.KategoriListesi,new { @class = "text-danger" })
+        <br />
+         @Html.DropDownListFor(a => a.Tedarikcisi, Model.TedarikciListesi, new { @class = "text-danger" })
+        <input type="submit" name="name" value="Ürün Ekle" />
+        }
+    </div>
+    
+</body>
+</html>

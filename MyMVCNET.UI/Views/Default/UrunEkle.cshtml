@@ -1,0 +1,70 @@
+﻿
+@{
+    Layout = null;
+}
+@model MyMVCNET.UI.Models.VM.UrunEkleVM
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UrunEkle</title>
+    <style>
+        form {
+            background-color: #f1f1f1;
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+            form input[type="text"], select {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+            form input[type="submit"] {
+                background-color: #4CAF50;
+                color: white;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+                form input[type="submit"]:hover {
+                    background-color: #45a049;
+                }
+    </style>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            @*@Html.AntiForgeryToken()*@
+
+            @Html.TextBoxFor(a => a.UrunAdi)
+
+            <span>
+                Stok
+            </span>@Html.TextBoxFor(a => a.StokMiktari)
+
+            <br />
+
+            <br />
+            @Html.TextBoxFor(a => a.UrunFiyati)
+            <br />
+
+            @Html.DropDownListFor(a => a.Kategorisi, Model.KategoriListesi,new { @class = "text-danger" })
+        <br />
+         @Html.DropDownListFor(a => a.Tedarikcisi, Model.TedarikciListesi, new { @class = "text-danger" })
+        <input type="submit" name="name" value="Ürün Ekle" />
+        }
+    </div>
+  
+</body>
+</html>
